@@ -11,6 +11,7 @@
     "tsx": "^4.19.1"
   },
   "scripts": {
+    "my": "bun run solutions/se01e02/app.ts",
     "agent": "bun run agent/app.ts",
     "advanced_web_search": "bun advanced_web_search/app.ts",
     "chain": "bun run chain/app.ts",
@@ -171,10 +172,19 @@
     "zod": "^3.23.8"
   },
   "trustedDependencies": [
+    "@playwright/browser-chromium",
+    "better-sqlite3",
+    "bufferutil",
+    "canvas",
+    "esbuild",
     "faiss-node",
     "markmap-cli",
     "node-vad",
     "onnxruntime-node",
-    "protobufjs"
+    "pdf2html",
+    "protobufjs",
+    "puppeteer",
+    "sharp",
+    "utf-8-validate"
   ]
 }
