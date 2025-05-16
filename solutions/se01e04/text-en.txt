@@ -1,0 +1,49 @@
+<objective>
+Your task is to plan a path for a robot to reach a database in a grid-based map.
+
+**Rules:**
+- The robot can move in four directions: UP, RIGHT, DOWN, LEFT.
+- Each move counts as one step.
+- The robot cannot move outside the map boundaries.
+- The robot must avoid walls ("p") — stepping on one results in failure.
+
+**Map Legend:**
+- "o" = safe cell (can move here)
+- "p" = wall (must avoid)
+- "r" = robot’s starting position
+- "b" = database (target)
+
+**Map Example:**
+[
+  ["o", "p", "o", "o", "o", "o"],
+  ["o", "o", "o", "p", "o", "o"],
+  ["o", "p", "o", "p", "o", "o"],
+  ["r", "p", "o", "o", "o", "b"]
+]
+
+The robot starts at position (3,0) and must reach the database at position (3,5), avoiding all walls and staying within the map.
+
+**Instructions:**
+Return the list of steps as a JSON object wrapped by <RESULT>json</RESULT> in the exact format below:
+
+<RESULT>
+{
+  "steps": "UP, RIGHT, DOWN, LEFT"
+}
+</RESULT>
+
+</objective>
+
+<examples>
+  <RESULT>
+  {
+    "steps": "UP, RIGHT, DOWN, LEFT"
+  }
+  </RESULT>
+
+  <RESULT>
+  {
+    "steps": "UP, RIGHT, DOWN, LEFT, LEFT, LEFT"
+  }
+  </RESULT>
+<examples/>

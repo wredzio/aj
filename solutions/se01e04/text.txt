@@ -1,0 +1,79 @@
+<objective>
+  Zaplanuj drogę robota do bazy danych, robot moze poruszac się UP, RIGHT, DOWN, LEFT i kazdy ruch to jedna akcja
+
+  Robot i baza danych znajduje się na mapie. Na mapie znajdują się przeszkody które nalezy unikać.
+
+  mapa na początku wygląda tak jak poniezej, gdzie o to miejsce bezpieczne do poruszania, p to przeszkoda a b to baza danych
+  [
+    [o,p,o,o,o,o],
+    [o,o,o,p,o,o],
+    [o,p,o,p,o,o],
+    [r,p,o,o,o,b],
+  ]
+
+  pamiętaj aby wygenerować liste stepów w json 
+  tak jak w przykładzie 
+
+   "<RESULT>
+    {
+    "steps": "UP, RIGHT, DOWN, LEFT"
+    }
+   </RESULT>"
+</objective>
+
+<examples>
+  <RESULT>
+  {
+   "steps": "UP, RIGHT, DOWN, LEFT"
+  }
+  </RESULT>
+
+  <RESULT>
+  {
+   "steps": "UP, RIGHT, DOWN, LEFT, LEFT, LEFT"
+  }
+  </RESULT>
+<examples/>
+
+<objective>
+Plan a path for the robot to reach the database. The robot can move in four directions: UP|RIGHT|DOWN|LEFT, and each move counts as one step. Robot cannot move outside the map
+
+The robot and the database are located on a grid map. The map contains walls that MUST be avoided otherwise robot will die.
+
+At the beginning, the map looks like this, where:
+
+o = safe cell
+p = wall
+r = robot
+b = database
+
+[
+  ["o", "p", "o", "o", "o", "o"],
+  ["o", "o", "o", "p", "o", "o"],
+  ["o", "p", "o", "p", "o", "o"],
+  ["r", "p", "o", "o", "o", "b"]
+]
+
+so robot start position is 3,0 and need to go to 3,5 with avoiding walls and edge of the map, when robot will go UP his position would be 2,0
+
+plan the list of steps as a JSON object in the following format:
+<RESULT>
+{
+  "steps": "UP, RIGHT, DOWN, LEFT"
+}
+</RESULT>
+</objective>
+
+<examples>
+  <RESULT>
+  {
+   "steps": "UP, RIGHT, DOWN, LEFT"
+  }
+  </RESULT>
+
+  <RESULT>
+  {
+   "steps": "UP, RIGHT, DOWN, LEFT, LEFT, LEFT"
+  }
+  </RESULT>
+<examples/>
